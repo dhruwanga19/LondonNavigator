@@ -1,0 +1,20 @@
+# key files
+*.pem
+
+# local env files
+.env*.local
+
+# venv
+venv/
+.venv/
+
+# docs
+docs/
+
+# build
+build/
+dist/
+
+# logs
+logs/
+

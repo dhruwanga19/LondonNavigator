@@ -1,0 +1,52 @@
+# local env files
+backend/.env*.local
+
+# venv
+backend/venv/
+backend/.venv/
+
+# docs
+backend/docs/
+
+# build
+backend/build/
+backend/dist/
+
+# logs
+backend/logs/
+
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+frontend/node_modules/
+
+# Expo
+frontend/.expo/
+frontend/dist/
+frontend/web-build/
+
+# Native
+frontend/*.orig.*
+frontend/*.jks
+frontend/*.p8
+frontend/*.p12
+frontend/*.key
+frontend/*.mobileprovision
+
+# Metro
+frontend/.metro-health-check*
+
+# debug
+frontend/npm-debug.*
+frontend/yarn-debug.*
+frontend/yarn-error.*
+
+# macOS
+frontend/.DS_Store
+frontend/*.pem
+
+# local env files
+frontend/.env*.local
+
+# typescript
+frontend/*.tsbuildinfo
