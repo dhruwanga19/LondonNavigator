@@ -16,7 +16,7 @@ import TypingAnimation from "../components/TypingAnimation";
 import { useNavigation } from "@react-navigation/native";
 import { Theme } from "../styling/Theme";
 
-const API_KEY = "AIzaSyDYZe-GSK1YPKUvbiz4t-ov_Ni6guzFmks";
+const API_KEY = "GOOGLE_API_KEY";
 
 const ChatbotScreen = () => {
   const navigation = useNavigation();
