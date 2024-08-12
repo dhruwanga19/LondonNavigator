@@ -50,3 +50,4 @@ frontend/.env*.local
 
 # typescript
 frontend/*.tsbuildinfo
+backend/.env
