@@ -14,15 +14,12 @@ from dotenv import load_dotenv
 from datetime import datetime, timedelta
 
 load_dotenv()
-MONGODB_PASSWORD = os.getenv('MONGODB_PASSWORD')
-MONGODB_USERNAME = os.getenv('MONGODB_USERNAME')
+MONGODB_URI = os.getenv('MONGODB_URI')
 
-uri = f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@appointments.vxim5mp.mongodb.net/?retryWrites=true&w=majority&appName=appointments"
+client = MongoClient(MONGODB_URI)
 
-# uri = f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@4470.fe5k7eb.mongodb.net/?retryWrites=true&w=majority&appName=4470"
-client = MongoClient(uri)
-# print(client.list_database_names())
-db = client['4470']
+db = client['MyDB']
+
 appointments_collection = db['appointments']
 
 def get_booked_slots(date):

@@ -28,15 +28,12 @@ import json
 app = Flask(__name__)
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-MONGODB_PASSWORD = os.getenv('MONGODB_PASSWORD')
-MONGODB_USERNAME = os.getenv('MONGODB_USERNAME')
+MONGODB_URI = os.getenv('MONGODB_URI')
 
+client = MongoClient(MONGODB_URI)
 
-# uri= f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@4470.fe5k7eb.mongodb.net/?retryWrites=true&w=majority&appName=4470"
-uri = f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@appointments.vxim5mp.mongodb.net/?retryWrites=true&w=majority&appName=appointments"
+db = client['MyDB']
 
-client = MongoClient(uri)
-db = client['4470']
 user_collection = db['users']
 
 def chatbot_get_temp(findTemp):
